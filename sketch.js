@@ -24,6 +24,14 @@ function createGrid (gridSize){
     }
 }
 
+function changeTileColor(hoveredTile){
+    let r = Math.floor(Math.random() * 255)
+    let g = Math.floor(Math.random() * 255)
+    let b = Math.floor(Math.random() * 255)
+    let col = "rgb(" + r + "," + g + "," + b + ")"
+    hoveredTile.style.backgroundColor = col
+}
+
 /*
 function addRowTiles (rowAmount, rowNumID){
     let amt = rowAmount
@@ -39,4 +47,16 @@ function addRowTiles (rowAmount, rowNumID){
 */
 
 
+
 createGrid (16)
+const colorChange = document.querySelectorAll(".tile")
+const allTiles = document.querySelectorAll(".tile");
+
+    colorChange.forEach(tile => {
+        tile.addEventListener(
+            "mouseover", (event) => {
+            changeTileColor(event.target);
+        }
+        //new mouse events
+    );
+    });
