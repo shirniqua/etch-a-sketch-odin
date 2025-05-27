@@ -1,9 +1,10 @@
 body {
     background-color: rgb(224, 252, 252);
+    
 }
 #container {
     display: flex;
-    width: 100%;
+    width: 90%;
     height: 90vh;
     flex-direction: column;
 }

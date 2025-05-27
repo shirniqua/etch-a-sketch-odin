@@ -1,6 +1,8 @@
+
 let size = 16
 const cont = document.getElementById("container")
-//const addRow = document.createElement("div")
+
+
 
 function createGrid (gridSize){
     let items = gridSize
