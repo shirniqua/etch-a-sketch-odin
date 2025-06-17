@@ -1,10 +1,24 @@
 body {
     background-color: rgb(224, 252, 252);
-    
+    text-align: center;
 }
+
+button {
+    padding: 10px 30px;
+    background-color: bisque;
+    font: 1em sans-serif;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: antiquewhite;
+}
+
 #container {
     display: flex;
-    width: 90%;
+    margin: auto;
+    width: 96%;
     height: 90vh;
     flex-direction: column;
 }

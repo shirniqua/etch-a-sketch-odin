@@ -1,10 +1,10 @@
-
-let size = 16
 const cont = document.getElementById("container")
+const buttonSmash = 0
 
 
 
 function createGrid (gridSize){
+    cont.replaceChildren()
     let items = gridSize
     let count = 1
     let rowID
@@ -25,6 +25,8 @@ function createGrid (gridSize){
         count++
     }
 }
+
+
 
 function changeTileColor(hoveredTile){
     let r = Math.floor(Math.random() * 255)
@@ -48,11 +50,13 @@ function addRowTiles (rowAmount, rowNumID){
 }
 */
 
+const button = document.getElementById("button").addEventListener("click", function() {
+    let size = prompt("Enter the size of your grid, less than 100")
+    createGrid (size)
+})
 
 
-createGrid (16)
 const colorChange = document.querySelectorAll(".tile")
-const allTiles = document.querySelectorAll(".tile");
 
     colorChange.forEach(tile => {
         tile.addEventListener(
@@ -62,3 +66,5 @@ const allTiles = document.querySelectorAll(".tile");
         //new mouse events
     );
     });
+
+
