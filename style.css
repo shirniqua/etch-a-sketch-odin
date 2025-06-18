@@ -4,22 +4,22 @@ body {
 }
 
 button {
-    padding: 10px 30px;
-    background-color: bisque;
+    padding: 10px 20px;
+    background-color: rgb(255, 228, 196);
     font: 1em sans-serif;
     border-radius: 6px;
     margin-bottom: 20px;
 }
 
 button:hover {
-    background-color: antiquewhite;
+    background-color: rgb(250, 235, 215);
 }
 
 #container {
     display: flex;
     margin: auto;
     width: 96%;
-    height: 90vh;
+    height: 80vh;
     flex-direction: column;
 }
 

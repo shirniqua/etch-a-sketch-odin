@@ -1,5 +1,5 @@
 const cont = document.getElementById("container")
-const buttonSmash = 0
+
 
 
 
@@ -36,6 +36,13 @@ function changeTileColor(hoveredTile){
     hoveredTile.style.backgroundColor = col
 }
 
+function enableHover() {
+  const tiles = document.querySelectorAll('.tile');
+  tiles.forEach(tile =>
+    tile.addEventListener('mouseover', () => changeTileColor(tile))
+  );
+}
+
 /*
 function addRowTiles (rowAmount, rowNumID){
     let amt = rowAmount
@@ -50,21 +57,33 @@ function addRowTiles (rowAmount, rowNumID){
 }
 */
 
-const button = document.getElementById("button").addEventListener("click", function() {
+const button = document.getElementById("button")
+button.onclick = () => {
     let size = prompt("Enter the size of your grid, less than 100")
-    createGrid (size)
-})
+    if (size > 100) {
+        alert("Grid size must be no more than 100!")
+        createGrid(0)
+    }
+    else {
+        createGrid (size)
+        enableHover();
+    }
+}
+/*function callCreate() {
+    let size = prompt("Enter the size of your grid, less than 100")
+    if (size > 100) {
+        alert("Grid size must be no more than 100!")
+        createGrid(0)
+    }
+    else {
+        createGrid (size)
+    }
+}*/
 
 
-const colorChange = document.querySelectorAll(".tile")
 
-    colorChange.forEach(tile => {
-        tile.addEventListener(
-            "mouseover", (event) => {
-            changeTileColor(event.target);
-        }
-        //new mouse events
-    );
-    });
+
+  
+    
 
 
