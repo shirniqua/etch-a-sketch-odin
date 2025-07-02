@@ -1,8 +1,5 @@
 const cont = document.getElementById("container")
 
-
-
-
 function createGrid (gridSize){
     cont.replaceChildren()
     let items = gridSize
@@ -16,7 +13,7 @@ function createGrid (gridSize){
         addRow.id = rowID
         for (let x=0; x<items; x++){
             //create same amount of items in the row
-            const addTile = document.createElement("div")
+            const addTile = document.createElement("lightnessdiv")
             addTile.classList.add("tile")
             addRow.appendChild(addTile)
         }
@@ -26,14 +23,16 @@ function createGrid (gridSize){
     }
 }
 
-
-
+    
 function changeTileColor(hoveredTile){
-    let r = Math.floor(Math.random() * 255)
-    let g = Math.floor(Math.random() * 255)
-    let b = Math.floor(Math.random() * 255)
-    let col = "rgb(" + r + "," + g + "," + b + ")"
-    hoveredTile.style.backgroundColor = col
+    let r = Math.floor(Math.random() * 256)
+    let g = Math.floor(Math.random() * 256)
+    let b = Math.floor(Math.random() * 256)
+    
+    hoveredTile.style.backgroundColor = `rgb(${r},${g},${b})`
+
+    let currentOpacity = parseFloat(hoveredTile.style.opacity) || 0
+    hoveredTile.style.opacity = Math.min(1, currentOpacity + 0.1)
 }
 
 function enableHover() {
@@ -51,7 +50,7 @@ function addRowTiles (rowAmount, rowNumID){
     for (let x=0; x<amt; x++){
         //create same amount of items in the row
         const addTile = document.createElement("div")
-        addTile.classList.add("tile")
+        addTile.classList.add("tsile")
         p.appendChild(addTile)
     }
 }
@@ -69,16 +68,7 @@ button.onclick = () => {
         enableHover();
     }
 }
-/*function callCreate() {
-    let size = prompt("Enter the size of your grid, less than 100")
-    if (size > 100) {
-        alert("Grid size must be no more than 100!")
-        createGrid(0)
-    }
-    else {
-        createGrid (size)
-    }
-}*/
+
 
 
 
