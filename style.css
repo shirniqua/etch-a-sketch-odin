@@ -18,20 +18,22 @@ button:hover {
 #container {
     display: flex;
     margin: auto;
-    width: 96%;
+    width: 960px;
     height: 80vh;
     flex-direction: column;
+    border: 1px solid;
 }
 
 .row {
     padding: 0%;
     width: 100%;
     flex: 1;
+    
     display: flex;
     flex-direction: row;
 }
 
 .tile {
-    border: 1px solid;
+    
     width: 100%;
 }
