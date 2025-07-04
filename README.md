@@ -15,3 +15,6 @@ Yeah, colortils is not a library. The other libraries can be imported with eithe
 
 27th June, 2025
 So I misread the instructions lmaooooooo. The solution was actually the exact thing I did earlier. It makes sense to either darken or change the opacity. I was attempting to darken but my colors were random so there was no actual way to measure/view the darkening of the colors to black since the colors were changing each time. So i'll remove the extra code for converting the RGB to HSL and vice versa as well as the darkening code.
+
+2nd July, 2025
+I made the changes and it finally works.
