@@ -4,7 +4,7 @@ body {
 }
 
 button {
-    padding: 10px 20px;
+    padding: 10px 16px;
     background-color: rgb(255, 228, 196);
     font: 1em sans-serif;
     border-radius: 6px;
@@ -18,22 +18,21 @@ button:hover {
 #container {
     display: flex;
     margin: auto;
-    width: 960px;
+    max-width: 960px;
     height: 80vh;
     flex-direction: column;
-    border: 1px solid;
+    border: 20px solid red;
+    border-radius: 6px;
 }
 
 .row {
     padding: 0%;
     width: 100%;
     flex: 1;
-    
     display: flex;
     flex-direction: row;
 }
 
 .tile {
-    
     width: 100%;
 }
